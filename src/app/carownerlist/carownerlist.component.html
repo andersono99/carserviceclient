@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-title>Listado de propietarios</mat-card-title>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let car of cars">
+          <img mat-list-avatar src="{{car.giphyUrl}}" alt="{{car.name}}" >
+          <h3 mat-line>
+          <a>{{car.name}}, Propietario: {{car.ownerDni}}</a> 
+          </h3>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  
+    <button mat-fab color="primary" [routerLink]="['/car-list']">Carros</button>
+    <button mat-fab color="primary" [routerLink]="['/owner-list']">Clientes</button>
+  </mat-card>

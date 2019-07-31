@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title>Lista Clientes</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let owner of bucket">
+        <h3 mat-line>
+          <a mat-button [routerLink]="['/owner-edit', owner.dni]">{{owner.name}} </a> 
+      
+        </h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <button mat-fab color="primary" [routerLink]="['/owner-add']">Agregar Cliente</button>
+  <button mat-fab color="primary" [routerLink]="['/car-list']">Carros</button>
+  <button mat-fab color="primary" [routerLink]="['/carownerlist']">Propietarios</button>
+
+</mat-card>
+      
+
